@@ -2,9 +2,9 @@ require('dotenv/config');
 
 module.exports = {
   dialect: 'postgres',
-  host: '127.0.0.1',
-  username: 'postgres',
-  password: 'alidila9',
+  host: process.env.DATABASE_URL,
+  username: process.env.USER_NAME,
+  password: process.env.PASSWORD,
   database: 'gobarber',
   define: {
     timestamps: true,
