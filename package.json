@@ -41,5 +41,8 @@
     "sequelize-cli": "^5.5.0",
     "sucrase": "^3.10.1"
   },
+  "@std/esm": {
+    "esm": "js"
+  },
   "type": "module"
 }
