@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "node src/server.js",
+    "start": "nodemon src/server.js",
     "dev": "nodemon src/server.js",
     "queue": "nodemon src/queue.js"
   },
@@ -40,9 +40,5 @@
     "prettier": "^1.18.2",
     "sequelize-cli": "^5.5.0",
     "sucrase": "^3.10.1"
-  },
-  "@std/esm": {
-    "esm": "js"
   }
-  
 }
