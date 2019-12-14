@@ -6,7 +6,6 @@ module.exports = {
   host: process.env.DATABASE_HOST,
   username: process.env.USER_NAME,
   password: process.env.PASSWORD,
-  database: process.env.DATABASE_NAME,
 =======
   host: process.env.DATABASE_URL,
   username: process.env.USER_NAME,
