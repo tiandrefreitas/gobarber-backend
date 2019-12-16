@@ -2,10 +2,10 @@
   "name": "gobarber-server",
   "version": "1.0.0",
   "main": "index.js",
-  "type": "module",
   "license": "MIT",
   "scripts": {
-    "start": "node src/server.js",
+    "build": "sucrase ./src -d ./dist --transforms imports",
+    "start": "node dist/server.js",
     "dev": "nodemon src/server.js",
     "queue": "nodemon src/queue.js"
   },
