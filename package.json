@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "node src/server.js --experimental-modules",
+    "start": "node --experimental-modules src/server.js",
     "dev": "webpack"
   },
   "heroku-run-build-script": true,
