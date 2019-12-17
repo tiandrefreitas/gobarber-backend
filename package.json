@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "start": "node src/index.js",
-    "build": "webpack"
+    "dev": "webpack"
   },
   "heroku-run-build-script": true,
   "dependencies": {
