@@ -5,7 +5,8 @@
   "type": "module",
   "license": "MIT",
   "scripts": {
-    "start": "babel-node src/server.js",
+    "build": "babel src/*.js -d dist",
+    "start": "node ./dist/src/server.js",
     "dev": "nodemon src/server.js",
     "queue": "nodemon src/queue.js"
   },
