@@ -4,10 +4,10 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "./node_modules/bin/babel server.js",
-    "dev": "nodemon src/server.js",
-    "queue": "nodemon src/queue.js"
+    "start": "node src/index.js",
+    "build": "webpack"
   },
+  "heroku-run-build-script": true,
   "dependencies": {
     "@sentry/node": "5.9.0",
     "bcryptjs": "^2.4.3",
