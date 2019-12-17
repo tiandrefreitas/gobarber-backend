@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "node src/server.js",
+    "start": "node src/server.js --experimental-modules",
     "dev": "webpack"
   },
   "heroku-run-build-script": true,
@@ -35,7 +35,5 @@
     "node": "13.1.0",
     "yarn": "1.19.1"
   },
-  "@std/esm": {
-    "esm": "js"
-  }
+  "type": "module"
 }
