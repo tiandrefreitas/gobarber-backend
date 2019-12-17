@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
-  "scripts": {
-    "build": "sucrase ./src -d ./dist --transforms imports",
-    "start": "node dist/server.js",
+  "scripts": {   
     "dev": "nodemon src/server.js",
-    "queue": "nodemon src/queue.js"
+    "queue": "nodemon src/queue.js",
+    "build": "sucrase ./src -d ./dist --transforms imports",
+    "start": "node dist/server.js"
   },
   "dependencies": {
     "@sentry/node": "5.9.0",
@@ -28,7 +28,7 @@
     "pg-hstore": "^2.3.3",
     "react-router-dom": "^5.1.2",
     "sequelize": "^5.8.12",
-    "youch": "^2.0.10",    
+    "youch": "^2.0.10",
     "yup": "^0.27.0"
   },
   "devDependencies": {
@@ -41,5 +41,10 @@
     "prettier": "^1.18.2",
     "sequelize-cli": "^5.5.0",
     "sucrase": "^3.10.1"
+  },
+  "engines": {
+    "node": "13.1.0",
+    "yarn": "1.19.1"
   }
+ 
 }
