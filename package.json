@@ -10,6 +10,10 @@
   },
   "heroku-run-build-script": true,
   "dependencies": {
+    "@babel/core": "^7.7.5",
+    "@babel/node": "^7.7.4",
+    "@babel/plugin-proposal-class-properties": "^7.7.4",
+    "@babel/preset-env": "^7.7.6",
     "@sentry/node": "5.9.0",
     "bcryptjs": "^2.4.3",
     "bee-queue": "^1.2.2",
