@@ -35,8 +35,5 @@
   "engines": {
     "node": "13.1.0",
     "yarn": "1.19.1"
-  },
-  "@std/esm": {
-    "esm": "js"
   }
 }
