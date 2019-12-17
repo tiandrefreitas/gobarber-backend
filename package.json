@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "node --experimental-modules --es-module-specifier-resolution=node src/server.js",
+    "start": "node -r esm src/server.js",
     "dev": "webpack"
   },
   "heroku-run-build-script": true,
