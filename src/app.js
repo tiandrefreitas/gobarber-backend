@@ -32,7 +32,10 @@ class App {
     );
     this.server.use.options('*', cors());
     this.server.use.all('', function(req, res, next) {
-      res.header('Access-Control-Allow-Origin', 'http://localhost');
+      res.header(
+        'Access-Control-Allow-Origin',
+        'https://gobarber-backend.herokuapp.com'
+      );
       res.header(
         'Access-Control-Allow-Methods',
         'PUT, GET, POST, DELETE, OPTIONS'
