@@ -5,8 +5,7 @@
   "license": "MIT",
   "scripts": {
     "build": "sucrase ./src -d ./dist --transforms imports",
-    "start": "node dist/server.js",
-    "dev": "webpack"
+    "start": "node dist/server.js"    
   },
   "heroku-run-build-script": true,
   "dependencies": {
@@ -36,10 +35,5 @@
     "youch": "^2.0.10",
     "yup": "^0.27.0"
   },
-  "devDependencies": {},
-  "engines": {
-    "node": "13.1.0",
-    "yarn": "1.19.1"
-  }
-  
+  "devDependencies": {}  
 }
