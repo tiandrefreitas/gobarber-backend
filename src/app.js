@@ -27,7 +27,14 @@ class App {
     this.server.use(
       cors({
         origin: 'https://gobarber-backend.herokuapp.com',
-        allowedHeaders: ['Content-Type', 'Authorization'],
+        allowedHeaders: [
+          'Content-Type',
+          'Authorization',
+          'sessions',
+          'notifications',
+          '/notifications/:id',
+          'files',
+        ],
       })
     );
     this.server.use.options('*', cors());
