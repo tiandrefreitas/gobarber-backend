@@ -30,14 +30,20 @@ class App {
         allowedHeaders: ['Content-Type', 'Authorization'],
       })
     );
-    this.server.use.options('*', cors())
-    this.server.use..all('', function(req, res, next) {
-      res.header("Access-Control-Allow-Origin", "http://localhost");
-      res.header('Access-Control-Allow-Methods', 'PUT, GET, POST, DELETE, OPTIONS');
-      res.header('Access-Control-Allow-Headers', "Origin, X-Requested-With, Content-Type, Accept, Authorization");
+    this.server.use.options('*', cors());
+    this.server.use.all('', function(req, res, next) {
+      res.header('Access-Control-Allow-Origin', 'http://localhost');
+      res.header(
+        'Access-Control-Allow-Methods',
+        'PUT, GET, POST, DELETE, OPTIONS'
+      );
+      res.header(
+        'Access-Control-Allow-Headers',
+        'Origin, X-Requested-With, Content-Type, Accept, Authorization'
+      );
       //Auth Each API Request created by user.
       next();
-  });
+    });
     this.server.use(express.json());
     this.server.use(
       '/files',
