@@ -14,22 +14,30 @@ import './database';
 class App {
   constructor() {
     this.server = express();
-    this.server.use(function(req, res, next) {
-      res.header("Access-Control-Allow-Origin", "*");
-      res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-      next();
-    });
 
     Sentry.init(sentryConfig);
 
     this.middlewares();
     this.routes();
     this.exceptionHandler();
-  }     
+  }
 
   middlewares() {
     this.server.use(Sentry.Handlers.requestHandler());
-    this.server.use(cors());
+    this.server.use(
+      cors({
+        origin: 'https://gobarber-backend.herokuapp.com',
+        allowedHeaders: ['Content-Type', 'Authorization'],
+      })
+    );
+    this.server.use.options('*', cors())
+    this.server.use..all('', function(req, res, next) {
+      res.header("Access-Control-Allow-Origin", "http://localhost");
+      res.header('Access-Control-Allow-Methods', 'PUT, GET, POST, DELETE, OPTIONS');
+      res.header('Access-Control-Allow-Headers', "Origin, X-Requested-With, Content-Type, Accept, Authorization");
+      //Auth Each API Request created by user.
+      next();
+  });
     this.server.use(express.json());
     this.server.use(
       '/files',
