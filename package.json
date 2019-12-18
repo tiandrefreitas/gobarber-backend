@@ -5,12 +5,16 @@
   "type": "module",
   "license": "MIT",
   "scripts": {
-    "build": "babel src/*.js -d dist",
-    "start": "node ./dist/src/server.js",
-    "dev": "nodemon src/server.js",
-    "queue": "nodemon src/queue.js"
+    "build": "sucrase ./src -d ./dist --transforms imports",
+    "start": "node dist/server.js",
+    "dev": "webpack"
   },
+  "heroku-run-build-script": true,
   "dependencies": {
+    "@babel/core": "^7.7.5",
+    "@babel/node": "^7.7.4",
+    "@babel/plugin-proposal-class-properties": "^7.7.4",
+    "@babel/preset-env": "^7.7.6",
     "@sentry/node": "5.9.0",
     "bcryptjs": "^2.4.3",
     "bee-queue": "^1.2.2",
@@ -29,12 +33,14 @@
     "pg-hstore": "^2.3.3",
     "react-router-dom": "^5.1.2",
     "sequelize": "^5.8.12",
+    "sucrase": "3.10.1",
     "youch": "^2.0.10",
     "yup": "^0.27.0"
   },
   "devDependencies": {},
-  "@std/esm": {
-    "esm": "js"
+  "engines": {
+    "node": "13.1.0",
+    "yarn": "1.19.1"
   }
   
 }
