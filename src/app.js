@@ -27,15 +27,6 @@ class App {
     this.server.use(
       cors({
         origin: 'https://front-barber.herokuapp.com',
-        allowedHeaders: [
-          'Content-Type',
-          'Authorization',
-          'sessions',
-          'notifications',
-          'users',
-          '/notifications/:id',
-          'files',
-        ],
       })
     );
     this.server.use(express.json());
