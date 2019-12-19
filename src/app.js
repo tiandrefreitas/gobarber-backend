@@ -32,6 +32,7 @@ class App {
           'Authorization',
           'sessions',
           'notifications',
+          'users',
           '/notifications/:id',
           'files',
         ],
