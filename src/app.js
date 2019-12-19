@@ -26,7 +26,11 @@ class App {
     this.server.use(Sentry.Handlers.requestHandler());
     this.server.use(
       cors({
-        origin: 'https://front-barber.herokuapp.com',
+        origin: [
+          'https://front-barber.herokuapp.com',
+          'https://api.adorable.io/avatars/50/asdsada.png',
+          'https://api.adorable.io',
+        ],
       })
     );
     this.server.use(express.json());
