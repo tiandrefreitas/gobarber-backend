@@ -26,7 +26,7 @@ class App {
     this.server.use(Sentry.Handlers.requestHandler());
     this.server.use(
       cors({
-        origin: 'https://gobarber-backend.herokuapp.com',
+        origin: 'https://front-barber.herokuapp.com',
         allowedHeaders: [
           'Content-Type',
           'Authorization',
@@ -37,23 +37,6 @@ class App {
         ],
       })
     );
-    this.server.options('*', cors());
-    this.server.all('', function(req, res, next) {
-      res.header(
-        'Access-Control-Allow-Origin',
-        'https://gobarber-backend.herokuapp.com'
-      );
-      res.header(
-        'Access-Control-Allow-Methods',
-        'PUT, GET, POST, DELETE, OPTIONS'
-      );
-      res.header(
-        'Access-Control-Allow-Headers',
-        'Origin, X-Requested-With, Content-Type, Accept, Authorization'
-      );
-      //Auth Each API Request created by user.
-      next();
-    });
     this.server.use(express.json());
     this.server.use(
       '/files',
