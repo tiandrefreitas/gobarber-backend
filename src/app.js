@@ -38,7 +38,7 @@ class App {
       })
     );
     this.server.options('*', cors());
-    this.server.use.all('', function(req, res, next) {
+    this.server.all('', function(req, res, next) {
       res.header(
         'Access-Control-Allow-Origin',
         'https://gobarber-backend.herokuapp.com'
